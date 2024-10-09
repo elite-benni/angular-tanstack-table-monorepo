@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { UiComponent } from '@angular-monorepo/ui';
+import { MyLib2Component } from '@angular-monorepo/my-lib2';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, UiComponent],
+  imports: [NxWelcomeComponent, RouterModule, MyLib2Component],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  template: `<div><lib-my-lib2></lib-my-lib2></div>`,
 })
 export class AppComponent {
   title = 'tanstack_table_test';

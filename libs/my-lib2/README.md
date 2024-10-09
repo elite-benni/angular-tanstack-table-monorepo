@@ -1,7 +1,7 @@
-# ui
+# my-lib2
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test ui` to execute the unit tests.
+Run `nx test my-lib2` to execute the unit tests.

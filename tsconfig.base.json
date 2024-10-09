@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-monorepo/ui": ["libs/shared/ui/src/index.ts"]
+      "@angular-monorepo/my-lib2": ["libs/my-lib2/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

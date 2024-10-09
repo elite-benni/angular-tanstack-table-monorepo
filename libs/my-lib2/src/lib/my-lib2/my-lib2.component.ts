@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import {
   createAngularTable,
   createColumnHelper,
@@ -15,7 +16,7 @@ export interface Person {
   status: string;
   progress: number;
 }
-const defaultData: Person[] = [
+const data: Person[] = [
   {
     firstName: 'tanner',
     lastName: 'linsley',
@@ -43,27 +44,24 @@ const defaultData: Person[] = [
 ];
 
 const colHelper = createColumnHelper<Person>();
-const keys = Object.keys(defaultData[0]);
-
-const colDefs = keys.map((key) => {
+const columns = Object.keys(data[0]).map((key) => {
   return colHelper.accessor(key as keyof Person, {
-    header: 'tabletranslatekey.' + key,
+    header: key,
     cell: (info) => info.getValue(),
     footer: (info) => info.column.id,
   });
 });
 
 @Component({
-  selector: 'lib-ui',
+  selector: 'lib-my-lib2',
   standalone: true,
   imports: [CommonModule, FlexRenderDirective],
-  templateUrl: './ui.component.html',
-  styleUrl: './ui.component.css',
+  templateUrl: './my-lib2.component.html',
 })
-export class UiComponent {
+export class MyLib2Component {
   table = createAngularTable<Person>(() => ({
-    data: defaultData,
-    columns: colDefs,
+    data,
+    columns,
     rowSelection: {
       enabled: true,
     },
