@@ -1,0 +1,9 @@
+{
+  "name": "tanstack_table_test-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/tanstack_table_test-e2e/src",
+  "implicitDependencies": ["tanstack_table_test"],
+  "// targets": "to see all targets run: nx show project tanstack_table_test-e2e --web",
+  "targets": {}
+}
